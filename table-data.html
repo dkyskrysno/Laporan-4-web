@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Data</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <header>
+                <h1>PANEL ADMIN</h1>
+            </header>
+            <nav>
+                <ul>
+                  <li><a href="index.html"><i class="fa fa-fw fa-dashboard"></i>Dashboard</a></li>
+                  <li class="active-nav"><a href="table-data.html"><i class="fa  fa-bar-chart"></i>Table Data</a></li>
+                  <li><a href="user-profile.html"><i class="fa fa-fw fa-user"></i>User Profile</a></li>
+                  <li><a href="more.html"><i class="fa fa-fw fa-ellipsis-h"></i>More</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+          <div class="navbar">
+            <ul>
+              <li><a href="#"><i class="fa fa-fw fa-search"></i>Search</a></li>
+              <div class="centered-navbar">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="table-data.html">Table Data</a></li>
+                <li><a href="user-profile.html">Profile</a></li>
+                <li><a href="more.html">More</a></li>
+              </div>
+              <li style="float:right"><a href="#about">[Log out]</a></li>
+              <li style="float:right"><a href="#about">Welcome My Website</a></li>
+            </ul>
+          </div>
+          <ul class="breadcrumb">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="table-data.html">Table Data</a></li>
+            <li>Table</li>
+          </ul>
+            <section class="widget">
+              <div class="table-data-container">
+                <div class="table-container" style="float: left;">
+                    <table>
+                        <tr>
+                            <th style="line-height: 30px;" colspan="5" id="table-title"><span style="font-size: 20px; color: rgb(31, 31, 31);">Daftar Nama</span>
+                            <br><span style="color: #000000; font-weight: 100;">Nama Peserta yang Mendaftar</span>
+                            </th>
+                        </tr>
+                        <tr>
+                          <th>NO. Peserta</th>
+                          <th>NAMA</th>
+                          <th>Lomba</th>
+                          <th>ALAMAT</th>
+                          <th>UMUR</th>
+                        </tr>
+                        <tr>
+                          <td>001</td>
+                          <td>Dikcy Sukkrysno</td>
+                          <td>Esport</td>
+                          <td>Pattalassang</td>
+                          <td>20</td>
+                        </tr>
+                        <tr>
+                          <td>002</td>
+                          <td>Riona Khadijah A.B</td>
+                          <td>Badminton</td>
+                          <td>Minasa Upa</td>
+                          <td>20</td>
+                        </tr>
+                        <tr>
+                          <td>003</td>
+                          <td>Dandy Prayogo Dwi Putra</td>
+                          <td>Basket</td>
+                          <td>Borong</td>
+                          <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td>Fahra Rabiah</td>
+                            <td>Badminton</td>
+                            <td>Bontang</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>005</td>
+                            <td>Muhammad Rizal Rusmar</td>
+                            <td>Basket</td>
+                            <td>Pare-Pare</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>006</td>
+                            <td>A.M Faturrahman Al-Qadri</td>
+                            <td>Esport</td>
+                            <td>Minasa Upa</td>
+                            <td>21</td>
+                          </tr>
+                      </table>
+                </div>
+                <div class="right-chart" style="justify-content: center;">
+                  <div id="myChart" style="width:100%; max-width:500px; height:300px; float: right; margin-top: 150px;">
+                  </div>
+                  
+                  <script>
+                  google.charts.load('current', {'packages':['corechart']});
+                  google.charts.setOnLoadCallback(drawChart);
+                  
+                  function drawChart() {
+                  
+                  // Set Data
+                  const data = google.visualization.arrayToDataTable([
+                    ['Contry', 'Mhl'],
+                    ['Bolbas',54.8],
+                    ['Bultang',48.6],
+                    ['ML',44.4],
+                    ['Medali',64.4],
+
+                  ]);
+                  
+                  // Set Options
+                  const options = {
+                    title:'Daftar Peserta Lomba'
+                  };
+                  
+                  // Draw
+                  const chart = new google.visualization.PieChart(document.getElementById('myChart'));
+                  chart.draw(data, options);
+                  
+                  }
+                  </script>
+                </div>
+                <div class="clear"></div>
+              </div>
+                
+                <br>
+                <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a class="active" href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                  </div>
+
+                
+          </section>
+              
+        </main>
+      </div>
+</body>
+</html>
